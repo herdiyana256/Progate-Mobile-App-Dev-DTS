@@ -1,0 +1,2 @@
+JavaScript (disingkat JS) adalah bahasa scripting yang menjadi element penting dalam pengembangan web. Saat ini, hampir semua situs web menggunakan JS. JavaScript ES2015 (ES6), yang akan kita bahas pada pelajaran ini, adalah versi terbaru JS yang menjadi populer karena memungkinkan orang untuk coding dengan lebih efisien.
+
