@@ -11,3 +11,9 @@ const message = `this is a multiline string
 It can span multiple lines
 without any problems.`;
 console.log(message);
+
+/*
+this is a multiline string
+It can span multiple lines
+without any problems.
+*/

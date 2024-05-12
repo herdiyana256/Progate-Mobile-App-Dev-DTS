@@ -1,0 +1,55 @@
+JavaScript (disingkat JS) adalah bahasa scripting yang menjadi element penting dalam pengembangan web. Saat ini, hampir semua situs web menggunakan JS. JavaScript ES2015 (ES6), yang akan kita bahas pada pelajaran ini, adalah versi terbaru JS yang menjadi populer karena memungkinkan orang untuk coding dengan lebih efisien.
+
+Javascript: Bahasa Pemrograman Dinamis untuk Web
+JavaScript adalah bahasa pemrograman dinamis yang banyak digunakan untuk pengembangan web interaktif. Bahasa ini memungkinkan Anda untuk menambahkan animasi, efek visual, dan perilaku interaktif ke halaman web Anda. JavaScript juga dapat digunakan untuk mengembangkan aplikasi web yang kompleks, seperti game dan platform media sosial.
+
+Fitur Utama JavaScript
+Dinamis: JavaScript adalah bahasa yang dinamis, yang berarti Anda tidak perlu mendeklarasikan tipe data variabel sebelum menggunakannya.
+Berorientasi objek: JavaScript mendukung pemrograman berorientasi objek, yang memungkinkan Anda untuk membuat kode yang lebih modular dan terstruktur.
+Sisi klien: JavaScript dijalankan di sisi klien, yang berarti kode dieksekusi di browser pengguna. Hal ini memungkinkan Anda untuk membuat halaman web yang lebih dinamis dan interaktif.
+Sisi server: Dengan Node.js, JavaScript juga dapat digunakan untuk pengembangan sisi server, memungkinkan Anda untuk membangun aplikasi web back-end.
+Contoh Kode JavaScript
+Berikut adalah beberapa contoh kode JavaScript sederhana:
+
+1. Menampilkan pesan "Hello, World!"
+
+JavaScript
+console.log("Hello, World!");
+Gunakan kode dengan hati-hati.
+content_copy
+2. Menambahkan elemen paragraf ke halaman web
+
+JavaScript
+const paragraph = document.createElement("p");
+paragraph.textContent = "This is a paragraph.";
+document.body.appendChild(paragraph);
+Gunakan kode dengan hati-hati.
+content_copy
+3. Menangani interaksi pengguna
+
+JavaScript
+const button = document.getElementById("button");
+button.addEventListener("click", () => {
+  alert("Button clicked!");
+});
+Gunakan kode dengan hati-hati.
+content_copy
+Manfaat Belajar JavaScript
+Meningkatkan keterampilan web development: JavaScript adalah bahasa penting untuk pengembangan web modern. Mempelajarinya akan memungkinkan Anda untuk membangun situs web dan aplikasi web yang lebih dinamis dan interaktif.
+Membuka peluang karir baru: Permintaan untuk developer JavaScript terus meningkat. Mempelajari JavaScript dapat membuka peluang karir baru di bidang pengembangan web dan front-end.
+Meningkatkan kemampuan problem solving: JavaScript dapat membantu Anda mengembangkan kemampuan problem solving dan berpikir logis.
+Sumber Belajar JavaScript
+Berikut adalah beberapa sumber belajar JavaScript:
+
+MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
+JavaScript Tutorial: https://www.w3schools.com/js/
+FreeCodeCamp: https://www.freecodecamp.org/
+The Odin Project: https://www.theodinproject.com/paths
+Kesimpulan
+JavaScript adalah bahasa pemrograman yang kuat dan serbaguna yang dapat digunakan untuk membangun berbagai macam aplikasi web. Mempelajari JavaScript dapat membuka peluang karir baru dan meningkatkan keterampilan pengembangan web Anda.
+
+Semoga materi ini bermanfaat!
+
+Sumber
+info
+stackoverflow.com/questions/65506311/list-or-regex-of-javascript-commands-functions-and-built-ins

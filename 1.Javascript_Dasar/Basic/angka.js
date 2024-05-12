@@ -12,6 +12,10 @@ console.log(6 * 2);
 
 console.log(10 / 3);
 
+
+
+
+
 /*
 3
 6
