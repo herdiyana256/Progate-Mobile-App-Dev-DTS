@@ -1,0 +1,100 @@
+Fungsi (Function) dalam JavaScript
+Fungsi (function) adalah blok kode yang dirancang untuk melakukan tugas tertentu. Fungsi memungkinkan Anda untuk menyusun ulang kode yang sama berulang kali tanpa harus menulisnya berulang kali. Hal ini membuat kode Anda lebih ringkas, mudah dibaca, dan mudah dipelihara.
+
+Deklarasi Fungsi
+Ada empat cara untuk mendeklarasikan fungsi dalam JavaScript:
+
+1. Deklarasi Fungsi Biasa
+
+JavaScript
+function namaFungsi() {
+  // Kode yang ingin dieksekusi
+}
+Gunakan kode dengan hati-hati.
+content_copy
+2. Ekspresi Fungsi
+
+JavaScript
+const namaFungsi = function() {
+  // Kode yang ingin dieksekusi
+};
+Gunakan kode dengan hati-hati.
+content_copy
+3. Fungsi Arrow (ES6)
+
+JavaScript
+const namaFungsi = () => {
+  // Kode yang ingin dieksekusi
+};
+Gunakan kode dengan hati-hati.
+content_copy
+4. Constructor
+
+JavaScript
+function NamaKelas(nama, umur) {
+  this.nama = nama;
+  this.umur = umur;
+}
+Gunakan kode dengan hati-hati.
+content_copy
+Memanggil Fungsi
+Setelah mendeklarasikan fungsi, Anda dapat memanggilnya dari mana saja di dalam program Anda dengan menggunakan namanya diikuti dengan tanda kurung dan argumen (jika ada).
+
+JavaScript
+namaFungsi(); // Memanggil fungsi tanpa argumen
+namaFungsi(argumen1, argumen2); // Memanggil fungsi dengan argumen
+Gunakan kode dengan hati-hati.
+content_copy
+Parameter Fungsi
+Parameter fungsi adalah variabel yang digunakan untuk menerima nilai dari luar fungsi saat dipanggil.
+
+JavaScript
+function namaFungsi(parameter1, parameter2) {
+  // Kode yang ingin dieksekusi
+}
+Gunakan kode dengan hati-hati.
+content_copy
+Di dalam fungsi, Anda dapat mengakses parameter menggunakan nama variabel yang ditentukan saat deklarasi fungsi.
+
+JavaScript
+function namaFungsi(nama, umur) {
+  console.log("Nama: " + nama);
+  console.log("Umur: " + umur);
+}
+
+namaFungsi("Budi", 20);
+Gunakan kode dengan hati-hati.
+content_copy
+Nilai Kembali Fungsi
+Fungsi dapat mengembalikan nilai kepada kode yang memanggilnya menggunakan kata kunci return.
+
+JavaScript
+function hitungLuasPersegi(sisi) {
+  return sisi * sisi;
+}
+
+const luas = hitungLuasPersegi(5);
+console.log(luas); // Output: 25
+Gunakan kode dengan hati-hati.
+content_copy
+Tipe Fungsi
+Dalam JavaScript, fungsi dapat diklasifikasikan menjadi dua tipe:
+
+Fungsi Deklaratif: Dibuat menggunakan deklarasi fungsi biasa.
+Fungsi Ekspresi: Dibuat menggunakan ekspresi fungsi atau fungsi arrow.
+Fungsi deklaratif dihoist ke atas cakupan leksikalnya, sedangkan fungsi ekspresi tidak.
+
+Ruang Lingkup (Scope) Fungsi
+Setiap fungsi memiliki ruang lingkupnya sendiri, yang menentukan variabel dan fungsi mana yang dapat diakses dari dalam fungsi tersebut. Variabel yang dideklarasikan di dalam fungsi hanya dapat diakses dari dalam fungsi tersebut, dan tidak dapat diakses dari luar fungsi.
+
+Penutupan (Closure)
+Penutupan (closure) adalah kemampuan suatu fungsi untuk mengakses variabel dari luar fungsi yang telah mengembalikannya. Hal ini memungkinkan Anda untuk membuat fungsi yang mempertahankan akses ke data dari luar fungsinya, bahkan setelah fungsi luarnya telah selesai dieksekusi.
+
+Contoh Penggunaan Fungsi
+Berikut adalah beberapa contoh penggunaan fungsi dalam JavaScript:
+
+Melakukan perhitungan matematis: Fungsi dapat digunakan untuk melakukan perhitungan aritmatika, seperti penjumlahan, pengurangan, perkalian, dan pembagian.
+Memproses data: Fungsi dapat digunakan untuk memproses data, seperti memfilter, mengurutkan, dan memanipulasi data.
+Membuat aplikasi web: Fungsi dapat digunakan untuk membangun aplikasi web interaktif, seperti kalkulator, game, dan formulir.
+Kesimpulan
+Fungsi adalah alat penting dalam pemrograman JavaScript yang memungkinkan Anda untuk menyusun ulang kode, meningkatkan modularitas, dan membuat kode yang lebih mudah dibaca dan dipelihara. Dengan memahami cara mendeklarasikan, memanggil, dan menggunakan fungsi, Anda dapat mengembangkan program JavaScript yang lebih kompleks dan efisien.

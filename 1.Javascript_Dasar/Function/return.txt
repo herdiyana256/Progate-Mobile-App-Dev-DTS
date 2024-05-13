@@ -1,0 +1,88 @@
+Materi: Contoh Penggunaan return dalam JavaScript
+Penggunaan Dasar return
+
+Kata kunci return dalam JavaScript digunakan untuk mengembalikan nilai dari sebuah fungsi. Nilai yang dikembalikan ini dapat digunakan oleh kode yang memanggil fungsi tersebut.
+
+Contoh 1: Fungsi Penjumlahan
+
+JavaScript
+function add(a, b) {
+  const sum = a + b;
+  return sum;
+}
+
+const result = add(5, 3);
+console.log(result); // Menampilkan 8
+Gunakan kode dengan hati-hati.
+content_copy
+Pada contoh diatas, fungsi add menjumlahkan dua nilai yang dimasukkan sebagai parameter dan mengembalikan hasil penjumlahan tersebut. Nilai yang dikembalikan disimpan dalam variabel result dan kemudian dicetak ke konsol.
+
+Contoh 2: Fungsi Pemeriksaan Nilai Ganjil/Genap
+
+JavaScript
+function isEven(number) {
+  if (number % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+const isTenEven = isEven(10);
+console.log(isTenEven); // Menampilkan true (karena 10 genap)
+
+const isElevenEven = isEven(11);
+console.log(isElevenEven); // Menampilkan false (karena 11 ganjil)
+Gunakan kode dengan hati-hati.
+content_copy
+Fungsi isEven menerima satu parameter (number) dan mengembalikan nilai true jika bilangan tersebut genap, dan false jika bilangan tersebut ganjil. Nilai yang dikembalikan digunakan untuk menentukan apakah 10 dan 11 adalah bilangan genap.
+
+Mengembalikan Nilai Lebih dari Satu
+
+Meskipun umumnya fungsi hanya mengembalikan satu nilai, Anda juga dapat mengembalikan beberapa nilai dalam bentuk array.
+
+Contoh: Fungsi Menghitung Nilai Lingkaran
+
+JavaScript
+function calculateCircle(radius) {
+  const area = Math.PI * radius * radius;
+  const circumference = 2 * Math.PI * radius;
+  return [area, circumference];
+}
+
+const circleData = calculateCircle(5);
+const area = circleData[0];
+const circumference = circleData[1];
+
+console.log("Luas:", area); // Menampilkan 78.53979659697625
+console.log("Keliling:", circumference); // Menampilkan 31.415926535897932
+Gunakan kode dengan hati-hati.
+content_copy
+Fungsi calculateCircle menghitung luas dan keliling lingkaran berdasarkan jari-jari. Nilai yang dikembalikan adalah array yang berisi dua elemen: luas dan keliling. Nilai-nilai ini kemudian disimpan dalam variabel terpisah dan dicetak ke konsol.
+
+Mengembalikan Objek
+
+Anda juga dapat mengembalikan objek yang berisi beberapa properti dan nilai.
+
+Contoh: Fungsi Membangun Objek Pengguna
+
+JavaScript
+function createUser(name, age, occupation) {
+  return {
+    name: name,
+    age: age,
+    occupation: occupation
+  };
+}
+
+const user = createUser("Budi", 30, "Software Engineer");
+console.log(user.name); // Menampilkan "Budi"
+console.log(user.age); // Menampilkan 30
+console.log(user.occupation); // Menampilkan "Software Engineer"
+Gunakan kode dengan hati-hati.
+content_copy
+Fungsi createUser menerima tiga parameter dan mengembalikan objek yang berisi informasi tentang pengguna. Objek yang dikembalikan kemudian disimpan dalam variabel user dan propertinya diakses menggunakan notasi titik.
+
+Kesimpulan
+
+return adalah alat penting dalam JavaScript untuk mengembalikan nilai dari fungsi. Anda dapat menggunakan return untuk mengembalikan nilai tunggal, array, atau objek, memungkinkan Anda untuk membuat fungsi yang fleksibel dan dapat digunakan kembali untuk berbagai keperluan.

@@ -1,0 +1,73 @@
+Arrow Function dalam JavaScript
+Pengenalan Arrow Function
+
+Arrow function adalah cara lain untuk mendefinisikan fungsi dalam JavaScript. Umumnya digunakan untuk fungsi yang pendek dan sederhana. Arrow function menggunakan sintaks yang lebih ringkas dibandingkan dengan deklarasi fungsi tradisional.
+
+Sintaks Arrow Function
+
+JavaScript
+const namaFungsi = (parameter1, parameter2, ...) => {
+  // kode yang akan dijalankan
+};
+Gunakan kode dengan hati-hati.
+content_copy
+Beberapa hal yang perlu diperhatikan:
+
+Tidak menggunakan kata kunci function.
+Diawali dengan definisi nama fungsi (opsional).
+D diikuti tanda kurung untuk parameter (opsional).
+Dilanjutkan dengan tanda panah =>.
+Dapat berisi kode yang akan dijalankan di dalam blok kode (wajib).
+Contoh Arrow Function
+
+Berikut adalah beberapa contoh penggunaan arrow function:
+
+1. Fungsi Tanpa Parameter
+
+JavaScript
+const sayHi = () => console.log("Hai!");
+
+sayHi(); // Menampilkan "Hai!"
+Gunakan kode dengan hati-hati.
+content_copy
+2. Fungsi dengan Satu Parameter
+
+JavaScript
+const greet = (name) => console.log("Halo, " + name + "!");
+
+greet("Andi"); // Menampilkan "Halo, Andi!"
+Gunakan kode dengan hati-hati.
+content_copy
+3. Fungsi dengan Beberapa Parameter
+
+JavaScript
+const multiply = (x, y) => x * y;
+
+const hasil = multiply(5, 3);
+console.log(hasil); // Menampilkan 15
+Gunakan kode dengan hati-hati.
+content_copy
+4. Fungsi dengan Statement Multi-Baris
+
+JavaScript
+const calculateArea = (length, width) => {
+  const area = length * width;
+  return area;
+};
+
+const totalArea = calculateArea(7, 4);
+console.log(totalArea); // Menampilkan 28
+Gunakan kode dengan hati-hati.
+content_copy
+Keuntungan Menggunakan Arrow Function
+
+Sintaks yang lebih ringkas untuk fungsi pendek dan sederhana.
+Konteks this yang lebih jelas, mengikuti konteks di mana fungsi didefinisikan.
+Kapan Sebaiknya Menggunakan Arrow Function
+
+Untuk fungsi callback pada method array seperti map, filter, dan reduce.
+Untuk fungsi event listener.
+Untuk fungsi yang sederhana dan tidak membutuhkan this khusus.
+Kesimpulan
+
+Arrow function menawarkan cara penulisan fungsi yang lebih ringkas dan terkadang lebih mudah dibaca.  Namun, fungsi deklarasi tradisional masih memiliki perannya tersendiri. Pilihlah cara penulisan fungsi yang paling sesuai dengan kebutuhan dan gaya penulisan kode Anda.
