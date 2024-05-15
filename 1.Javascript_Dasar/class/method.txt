@@ -1,0 +1,108 @@
+. Pengertian Method
+
+Dalam JavaScript, method adalah fungsi yang terkait dengan objek.  Berbeda dengan fungsi biasa yang berdiri sendiri, method dipanggil menggunakan objek tempat method tersebut didefinisikan.
+
+2. Mendefinisikan Method
+
+Ada dua cara untuk mendefinisikan method dalam JavaScript:
+
+a. Menggunakan Function Declaration:
+
+JavaScript
+const person = {
+  name: "John Doe",
+  age: 30,
+  greet: function() {
+    console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+  }
+};
+
+person.greet(); // Output: Hello, my name is John Doe and I am 30 years old.
+Gunakan kode dengan hati-hati.
+content_copy
+b. Menggunakan Arrow Function (ES6):
+
+JavaScript
+const person = {
+  name: "Alice",
+  age: 25,
+  greet: () => {
+    console.log(`Hi! I'm ${this.name}.`);
+  }
+};
+
+person.greet(); // Output: Hi! I'm Alice.
+Gunakan kode dengan hati-hati.
+content_copy
+3. Menjalankan Method
+
+Untuk menjalankan method, gunakan operator dot (.) pada objek diikuti dengan nama method dan argumen jika diperlukan.
+
+4. Argumen dan Keyword this
+
+Method dapat menerima argumen seperti fungsi biasa. Keyword this di dalam method merujuk pada objek tempat method tersebut didefinisikan.
+
+5. Contoh Code Method:
+
+Berikut beberapa contoh penggunaan method dalam JavaScript:
+
+a. Menghitung Luas Persegi:
+
+JavaScript
+const persegi = {
+  sisi: 5,
+  hitungLuas: function() {
+    return this.sisi * this.sisi;
+  }
+};
+
+const luasPersegi = persegi.hitungLuas();
+console.log(`Luas persegi: ${luasPersegi}`); // Output: Luas persegi: 25
+Gunakan kode dengan hati-hati.
+content_copy
+b. Memformat Tanggal:
+
+JavaScript
+const tanggal = {
+  tahun: 2024,
+  bulan: 5,
+  tanggal: 15,
+  formatTanggal: function() {
+    return `${this.tanggal}/${this.bulan}/${this.tahun}`;
+  }
+};
+
+const formattedDate = tanggal.formatTanggal();
+console.log(`Tanggal: ${formattedDate}`); // Output: Tanggal: 15/5/2024
+Gunakan kode dengan hati-hati.
+content_copy
+c. Method dengan Argumen:
+
+JavaScript
+const kalkulator = {
+  tambah: function(angka1, angka2) {
+    return angka1 + angka2;
+  },
+  kali: function(angka1, angka2) {
+    return angka1 * angka2;
+  }
+};
+
+const hasilTambah = kalkulator.tambah(10, 5);
+const hasilKali = kalkulator.kali(3, 4);
+
+console.log(`Hasil penjumlahan: ${hasilTambah}`); // Output: Hasil penjumlahan: 15
+console.log(`Hasil perkalian: ${hasilKali}`); // Output: Hasil perkalian: 12
+Gunakan kode dengan hati-hati.
+content_copy
+6. Kesimpulan
+
+Method adalah konsep penting dalam pemrograman berorientasi objek (OOP) di JavaScript. Method memungkinkan objek untuk memiliki fungsi-fungsi yang berkaitan dengan datanya.
+
+Sumber Belajar:
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes
+https://developer.mozilla.org/en-US/docs/Web/JavaScript
+Sumber
+info

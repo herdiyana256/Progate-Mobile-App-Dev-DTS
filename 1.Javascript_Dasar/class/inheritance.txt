@@ -1,0 +1,70 @@
+Inheritance dalam JavaScript
+JavaScript tidak memiliki mekanisme inheritance yang formal seperti class-based inheritance yang ditemukan di bahasa pemrograman berorientasi objek (OOP) tradisional seperti Java atau C++. Namun, JavaScript menawarkan pendekatan lain untuk mencapai konsep pewarisan menggunakan prototypes.
+
+1. Pengertian Inheritance
+
+Inheritance adalah kemampuan sebuah objek untuk mewarisi properti dan method dari objek lain. Objek yang diwarisi disebut child object (objek anak), sedangkan objek yang mewariskan properti dan method disebut parent object (objek parent). Inheritance membantu dalam menciptakan hierarki objek yang terstruktur dan mengurangi kode duplikasi.
+
+2. Prototypes di JavaScript
+
+Semua objek di JavaScript memiliki prototype. Prototype adalah objek internal yang digunakan sebagai cetak biru (blueprint) untuk objek tersebut. Ketika Anda mengakses properti atau method pada suatu objek, JavaScript pertama-tama akan mencari properti atau method tersebut di objek itu sendiri. Jika tidak ditemukan, JavaScript kemudian akan mencari properti atau method tersebut di prototype objek tersebut. Ini berlanjut hingga rantai prototype terputus (tidak ada lagi prototype yang diasosiasikan).
+
+3. Simulasi Inheritance dengan Prototypes
+
+Untuk mencapai simulasi inheritance di JavaScript, kita bisa memanfaatkan konsep prototype. Berikut langkah-langkahnya:
+
+a. Mendefinisikan Parent Object:
+
+Buat objek yang berfungsi sebagai parent object.
+Tambahkan properti dan method yang ingin diwariskan ke objek ini.
+JavaScript
+function Hewan(jenis) {
+  this.jenis = jenis;
+}
+
+Hewan.prototype.suara = function() {
+  console.log("Suara default hewan");
+}
+Gunakan kode dengan hati-hati.
+content_copy
+b. Mendefinisikan Child Object:
+
+Buat fungsi konstruktor untuk child object.
+Gunakan Object.create() untuk membuat child object dengan prototype yang menunjuk ke parent object.
+Tambahkan properti dan method spesifik untuk child object.
+JavaScript
+function Anjing(jenis) {
+  Hewan.call(this, jenis); // Menjalankan konstruktor parent object
+}
+
+Object.setPrototypeOf(Anjing.prototype, Hewan.prototype); // Mengatur prototype Anjing ke Hewan
+
+Anjing.prototype.suara = function() {
+  console.log("Woof! Woof!");
+}
+Gunakan kode dengan hati-hati.
+content_copy
+4. Penggunaan:
+
+Dengan pendekatan ini, objek child (Anjing) mewarisi properti dan method dari parent object (Hewan). Kita bisa mengakses properti dan method yang diwariskan serta properti dan method spesifik child object.
+
+JavaScript
+const anjingku = new Anjing("Golden Retriever");
+
+console.log(anjingku.jenis); // Output: Golden Retriever
+anjingku.suara(); // Output: Woof! Woof! (dari method suara yang ditimpa di Anjing)
+Gunakan kode dengan hati-hati.
+content_copy
+5. Catatan:
+
+Pendekatan ini tidak seketat inheritance di bahasa pemrograman lain. Anda dapat secara tidak sengaja menimpa properti atau method yang diwariskan di child object.
+JavaScript memiliki mekanisme lain yang dapat digunakan untuk mencapai konsep inheritance seperti mixins dan class libraries, namun pembahasan tersebut lebih lanjut.
+6. Kesimpulan
+
+Simulasi inheritance dengan prototypes memungkinkan Anda untuk memanfaatkan struktur hierarki objek di JavaScript. Meskipun tidak seformal inheritance pada bahasa OOP lain, pendekatan ini membantu dalam mengatur kode dan mengurangi duplikasi.
+
+Sumber Belajar:
+
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes
+https://www.freecodecamp.org/news/understanding-prototypal-inheritance-in-javascript-with-css-93b2fcda75e4/
+https://www.w3schools.com/js/js_class_inheritance.asp

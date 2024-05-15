@@ -1,0 +1,104 @@
+
+Materi Class dalam JavaScript
+Pendahuluan:
+
+Class dalam JavaScript adalah sebuah blueprint atau rancangan dasar untuk membuat objek. Ini merupakan konsep fundamental dalam pemrograman berorientasi objek (OOP) yang memungkinkan Anda untuk membuat objek dengan properti dan metode yang seragam.
+
+Membuat Class:
+
+Untuk membuat class di JavaScript, Anda menggunakan keyword class diikuti dengan nama class dan kurung kurawal. Di dalam kurung kurawal, Anda dapat mendefinisikan properti dan metode untuk class tersebut.
+
+JavaScript
+class Mobil {
+  // Properti
+  constructor(merek, warna, tahun) {
+    this.merek = merek;
+    this.warna = warna;
+    this.tahun = tahun;
+  }
+
+  // Metode
+  mulai() {
+    console.log(`${this.merek} ${this.warna} tahun ${this.tahun} mulai berjalan.`);
+  }
+
+  berhenti() {
+    console.log(`${this.merek} ${this.warna} tahun ${this.tahun} berhenti berjalan.`);
+  }
+}
+Gunakan kode dengan hati-hati.
+content_copy
+Properti:
+
+Properti adalah variabel yang didefinisikan di dalam class. Anda dapat mengakses properti dari objek yang dibuat dari class tersebut menggunakan operator titik (.).
+
+JavaScript
+const mobilku = new Mobil("Toyota", "Merah", 2023);
+console.log(mobilku.merek); // Output: Toyota
+console.log(mobilku.warna); // Output: Merah
+console.log(mobilku.tahun); // Output: 2023
+Gunakan kode dengan hati-hati.
+content_copy
+Metode:
+
+Metode adalah fungsi yang didefinisikan di dalam class. Anda dapat memanggil metode dari objek yang dibuat dari class tersebut menggunakan operator titik (.).
+
+JavaScript
+mobilku.mulai(); // Output: Toyota Merah tahun 2023 mulai berjalan.
+mobilku.berhenti(); // Output: Toyota Merah tahun 2023 berhenti berjalan.
+Gunakan kode dengan hati-hati.
+content_copy
+Constructor:
+
+Constructor adalah metode khusus yang dipanggil secara otomatis saat Anda membuat objek baru dari class. Digunakan untuk menginisialisasi properti objek dengan nilai awal.
+
+JavaScript
+class Mobil {
+  constructor(merek, warna, tahun) {
+    this.merek = merek;
+    this.warna = warna;
+    this.tahun = tahun;
+  }
+
+  // ... metode lain
+}
+Gunakan kode dengan hati-hati.
+content_copy
+Pewarisan (Inheritance):
+
+Pewarisan memungkinkan Anda untuk membuat class baru yang mewarisi properti dan metode dari class lain. Class baru ini disebut subclass, dan class yang diwarisi disebut superclass.
+
+JavaScript
+class Truk extends Mobil {
+  constructor(merek, warna, tahun, muatanMaksimum) {
+    super(merek, warna, tahun); // Memanggil constructor superclass
+    this.muatanMaksimum = muatanMaksimum;
+  }
+
+  muatBarang(barang) {
+    if (barang <= this.muatanMaksimum) {
+      console.log(`Truk ${this.merek} ${this.warna} memuat barang ${barang} kg.`);
+    } else {
+      console.log(`Truk ${this.merek} ${this.warna} tidak dapat memuat barang ${barang} kg karena melebihi muatan maksimum.`);
+    }
+  }
+}
+Gunakan kode dengan hati-hati.
+content_copy
+Polimorfisme:
+
+Polimorfisme memungkinkan Anda untuk mendefinisikan metode dengan nama yang sama di subclass yang berbeda, dengan implementasi yang berbeda. Hal ini memungkinkan Anda untuk menangani objek dari berbagai subclass dengan cara yang sama, meskipun mereka memiliki implementasi yang berbeda.
+
+JavaScript
+const mobilku = new Mobil("Toyota", "Merah", 2023);
+const trukku = new Truk("Isuzu", "Biru", 2022, 5000);
+
+mobilku.mulai(); // Output: Toyota Merah tahun 2023 mulai berjalan.
+trukku.mulai(); // Output: Isuzu Biru tahun 2022 mulai berjalan.
+
+mobilku.berhenti(); // Output: Toyota Merah tahun 2023 berhenti berjalan.
+trukku.berhenti(); // Output: Isuzu Biru tahun 2022 berhenti berjalan.
+
+trukku.muatBarang(3000); // Output: Truk Isuzu Biru memuat barang 3000 kg.
+trukku.muatBarang(6000); // Output: Truk Isuzu Biru tidak dapat memuat barang 6000 kg karena melebihi muatan maksimum.
+Gunakan kode dengan hati-hati.
