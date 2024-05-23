@@ -1,0 +1,125 @@
+Command Line adalah tool untuk berinteraksi dengan komputer dengan hanya menggunakan text (juga dikenal sebagai text interface) daripada metode lain seperti klik dan scrolling. Mari kita pelajari karena ini sangat berguna untuk mengembangkan website dan aplikasi!
+Command UNIX adalah tipe command yang digunakan dalam Linux dan macOS.
+
+
+
+Seperti pada gambar di bawah, Anda dapat memberikan instruksi pada komputer dengan mengetik command ke terminal.
+Mari kita lihat jenis-jenis command pada slide berikutnya.
+Tidak perlu menulis $ karena itu merupakan simbol untuk menandakan dimana Anda bisa mulai mengetik command.
+
+contoh :
+
+Membuat file 
+$ touch sample.txt -> di git bash 
+touch ini adalah fungsi membuat file di sebuah direktori/Location file.
+
+
+Membuka file
+$ cat file_name -> di git bash 
+cat ini adalah fungsi membuka file yang sudah dibuat , ketika pesan ini dibuka maka isi dalam file akan ditampilkan langsung di command line.
+
+
+Membuka direktori 
+$ mkdir direktori_name  -> di git bash 
+mkdir adalah fungsi untuk membuat foler di sebuah direktori project 
+
+
+#management structure file 
+untuk berpindah antar file kita bisa menggunakan cd directory_name (sesuai dengan direktori yang spesifik)
+
+
+
+# direktori root 
+Direktori root direpresentasikan dengan / .
+$ pwd ->  di git bash 
+pwd berfungsi untuk mengetahui direktori root mana kita berada. 
+
+
+
+#Menampilkan Konten direktori 
+ls -> di git bash 
+berfungsi untuk melihat daftar file dan direktori didalam direktori saat ini 
+
+note :  ls hanya akan menampilkan direktori dan file yang merupakan anak langsung dari direktori saat ini.
+
+
+
+#direktori induk 
+$ cd .. -> di git bash
+berfungsu untuk  berpindah ke direktori induk 
+dengan hanya membuat perintah "cd ... nama file kita akan pindah ke direktori folder/ sub direktori yang di cari".
+
+
+
+# cd tanpa menetapkan sebuah direktori 
+ika Anda menjalankan cd tanpa menetapkan sebuah direktori, Anda dapat berpindah ke apa yang disebut direktori awal (home).
+Direktori awal diwakilkan tanda ~ seperti pada gambar di bawah.
+
+example : 
+languages $  pwd -> pwd pindah ke direktori awal 
+$ pwd 
+    /home/adam 
+    $ cd -> ketik cd untuk pindah ke direktori awal saat cek all file menggunakan "ls". 
+
+
+
+
+#Bekerja dengan File dan Direktori
+
+1. Pemindahan file
+2. Perubahan file
+3. Penyalinan file 
+4. Penghapusan file
+
+
+
+a. pemindahan file 
+$ mv file_yang_dipindahkan direktori_tujuan
+dengan fungsi ini kita bisa pindahkan file ke direktori / sub folder, dengan catatan pada terminal kita berada didalam dir file berada .
+
+
+b. pemindahan folder/ direktori
+engan mengetik mv direktori_yang_dipindahkan direktori_tujuan, Anda dapat memindahkan semua file dan direktori di bawah direktori tersebut.
+example : 
+$ mv adam herdiyan 
+folder/direktori adam berpindah ke folder/direktori herdiyan/
+
+
+
+c. Mengubah nama file 
+ang kita gunakan untuk memindahkan file dan direktori sebelumnya, dapat juga digunakan untuk menamai ulang sebuah file.
+Anda dapat menamai ulang sebuah file dengan mengetik mv nama_file_lama nama_file_baru.
+
+contoh : 
+$ mv nama_file_lama nama_file_baru
+dengan perintah ini maka nama file akan berubah 
+
+
+d. Menyalin file 
+kita dapat menggunakan command cp.
+Anda dapat menyalin sebuah file dengan mengetik cp file_yang_disalin nama_file_baru.
+$ cp file_yang_disalin nama_file_baru 
+
+example : 
+$ cp adam.txt keren.txt
+
+
+e. Menyali direktori/ folder
+nda juga dapat menyalin direktori dengan menambahkan pilihan -r (Recursive copy), seperti cp -r directory_yang_disalin nama_directori_baru.
+$ cp -r direktori_yang_disalin nama_direktori_baru
+
+note :
+Jika Anda mencoba untuk menyalin sebuah direktori tanpa menambahkan pilihan -r, Anda akan mendapat sebuah error dan command tidak akan dijalankan.
+
+
+f. Menghapus file 
+Selanjutnya, mari kita lihat bagaimana menghapus sebuah file.
+Untuk melakukannya, kita dapat menggunakan command rm, seperti rm file_yang_dihapus.
+$ rm file_yang_dihapus 
+
+example : 
+$ rm adam.txt -> menghapus file adam.txt
+
+g. Mengapus direktori
+cara menghapus direktori yaitu dengan menambahkan pilihan -r didalam command rm 
+$ rm -r adam -> menghapus direktori adam 

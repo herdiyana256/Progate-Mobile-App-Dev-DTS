@@ -1,0 +1,99 @@
+
+
+//JSON (JavaScript Object Notation) adalah format data berbasis teks ringan untuk pertukaran data antar aplikasi. Format ini mudah dibaca dan ditulis manusia, serta mudah diproses oleh mesin. JSON sering digunakan untuk mentransfer data antara server web dan aplikasi web, dan juga digunakan sebagai format penyimpanan data untuk berbagai aplikasi.
+
+
+
+[
+	{
+		"name": "Produk Pertama",
+		"price": 10000
+	},
+	{
+		"name": "Produk Kedua",
+		"price": 20000
+	}
+]
+
+
+/*
+Objek: Kumpulan pasangan kunci-nilai, di mana setiap kunci adalah string dan setiap nilai dapat berupa objek, array, string, angka, boolean, atau null.
+Array: Daftar nilai yang diurutkan, di mana setiap nilai dapat berupa objek, array, string, angka, boolean, atau null.
+
+*/
+
+
+
+
+// example 
+{
+    "nama": "Herdiyan",
+     "umyr": 30,
+     "pekerjaan": "CEO",
+     "hobi": ["Membaca", "Belajar", "Main Game"]
+}
+
+
+
+
+//Mengubah Objek Javascript menjadi JSON
+//Untuk mengubah objek Javascript menjadi JSON, Anda dapat menggunakan metode JSON.stringify(). Metode ini menerima objek Javascript sebagai argumen dan mengembalikan string JSON yang setara.
+const pengguna = {
+    nama: "Budi",
+    umur: 30,
+    pekerjaan: "Software Engineer",
+    hobi: ["membaca", "bermain game"]
+  };
+  
+  const jsonPengguna = JSON.stringify(pengguna);
+  console.log(jsonPengguna);
+
+
+
+
+  //Mengubah JSON menjadi Objek Javascript
+//Untuk mengubah string JSON menjadi objek Javascript, Anda dapat menggunakan metode JSON.parse(). Metode ini menerima string JSON sebagai argumen dan mengembalikan objek Javascript yang setara.
+
+const jsonPengguna = '{ "nama": "Budi", "umur": 30, "pekerjaan": "Software Engineer", "hobi": ["membaca", "bermain game"] }';
+
+const pengguna = JSON.parse(jsonPengguna);
+console.log(pengguna);
+
+
+
+//Menggunakan JSON dalam Aplikasi Web
+//JSON sering digunakan untuk mentransfer data antara server web dan aplikasi web. Hal ini dapat dilakukan dengan menggunakan teknologi seperti AJAX atau Fetch API.
+
+//Contoh Penggunaan JSON dalam Aplikasi Web
+//Berikut adalah contoh sederhana bagaimana JSON dapat digunakan untuk memuat data dari server web dan menampilkannya di halaman web:
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contoh Penggunaan JSON</title>
+</head>
+<body>
+  <div id="data-pengguna"></div>
+
+  <script>
+    fetch('https://example.com/data.json')
+      .then(response => response.json())
+      .then(data => {
+        const pengguna = data[0];
+        const divPengguna = document.getElementById('data-pengguna');
+
+        divPengguna.innerHTML = `
+          <h2>Nama: ${pengguna.nama}</h2>
+          <p>Umur: ${pengguna.umur}</p>
+          <p>Pekerjaan: ${pengguna.pekerjaan}</p>
+          <p>Hobi: ${pengguna.hobi.join(', ')}</p>
+        `;
+      });
+  </script>
+</body>
+</html>
+
+
+
+
+

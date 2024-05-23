@@ -1,0 +1,7 @@
+XML adalah sebuah bahasa markup yang digunakan untuk menyimpan dan mengirim data. Mirip dengan HTML, hanya saja kita bisa membuat sebuah tag sendiri, contohnya:
+<productlisting title:”Daftar Produk”> 
+ <product> 
+    <name>Produk Pertama</name>
+    <price>Produk Pertama</price>
+ </product>
+</productlisting>

@@ -1,0 +1,46 @@
+// XML (extensible markup Languange) -> untuk menyimpan dan mentransfer data terstruktur. XML mudah dibaca manusia dan mesin, dan sering digunakan dalam pengembangan web.
+ //Javascript adalah bahasa pemrograman yang populer digunakan untuk pengembangan web. Javascript dapat digunakan untuk memproses dan memanipulasi data XML.
+
+
+ /*
+engapa Menggunakan XML dengan Javascript?
+Ada beberapa alasan untuk menggunakan XML dengan Javascript:
+
+Membaca dan Memproses Data XML: Javascript dapat digunakan untuk membaca data XML dari file, string, atau URL. Data XML kemudian dapat diproses dan dimanipulasi dengan menggunakan DOM (Document Object Model).
+Membuat Data XML: Javascript dapat digunakan untuk membuat data XML baru. Data XML baru dapat disimpan ke file, string, atau dikirim ke server.
+Berkomunikasi dengan Layanan Web: Banyak layanan web menggunakan XML untuk pertukaran data. Javascript dapat digunakan untuk membuat permintaan ke layanan web dan memproses tanggapan XML.
+
+ */
+
+
+
+//Contoh Penggunaan XML dengan Javascript
+const fs = require("fs");
+const xml2js = require("xml2js");
+
+
+fs.readFile("data.xml", (err, data) => {
+    if(err) {
+        console.log(err);
+        return;
+    }
+
+
+    xml2js.parseString(data, (err, result) => {
+        if(err) {
+            console.log(err);
+            return;
+    }
+
+
+    const students = result.students.students;
+    for(const student of students) {
+        console.log(`Name: ${student.name}`);
+    }
+});
+
+
+});
+//Contoh ini akan membaca file XML bernama data.xml dan mencetak nama setiap siswa ke konsol.
+
+

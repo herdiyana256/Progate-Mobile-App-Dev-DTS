@@ -1,0 +1,44 @@
+Dalam JavaScript, konsep argument berhubungan dengan parameter pada fungsi. Berikut penjelasan dan contohnya:
+
+Argument vs Parameter
+
+Parameter: Merupakan variabel yang didefinisikan dalam tanda kurung saat mendeklarasikan fungsi. Parameter ini nantinya berfungsi sebagai tempat untuk menampung nilai yang akan diberikan saat fungsi dipanggil.
+Argument: Merupakan nilai aktual yang diberikan saat memanggil fungsi. Nilai argument ini akan mengisi parameter yang telah ditetapkan di fungsi.
+Contoh Penggunaan Argument:
+
+JavaScript
+function greet(name) { // "name" adalah parameter
+  console.log("Hello, " + name + "!");
+}
+
+greet("Budi"); // "Budi" adalah argument untuk parameter "name"
+greet("Ani");  // "Ani" adalah argument untuk parameter "name"
+Gunakan kode dengan hati-hati.
+content_copy
+Di sini, fungsi greet memiliki parameter name. Saat memanggil fungsi greet, kita memberikan argument "Budi" dan "Ani" yang akan mengisi parameter name di dalam fungsi.
+
+Argumen Lebih Banyak dari Parameter
+
+JavaScript memiliki objek khusus bernama arguments (perhatikan huruf "s" di akhir) yang dapat digunakan untuk mengakses semua argument yang diberikan saat fungsi dipanggil, meskipun jumlah argument lebih banyak dari parameter yang didefinisikan. Namun, penggunaan arguments tidak disarankan dalam JavaScript modern karena sifatnya yang kurang flexible.
+
+Contoh Penggunaan arguments:
+
+JavaScript
+function sumAll() {
+  let total = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    total += arguments[i];
+  }
+  return total;
+}
+
+const result1 = sumAll(1, 2, 3); // argument: 1, 2, 3
+const result2 = sumAll(5, 10, 15, 20); // argument: 5, 10, 15, 20
+
+console.log(result1); // Menampilkan 6
+console.log(result2); // Menampilkan 50
+Gunakan kode dengan hati-hati.
+content_copy
+Kesimpulan
+
+Argument adalah nilai yang diberikan saat memanggil fungsi, sedangkan parameter adalah variabel yang didefinisikan dalam fungsi untuk menampung nilai argument. Gunakan parameter sesuai kebutuhan dan hindari penggunaan arguments untuk kode yang lebih modern dan terstruktur.

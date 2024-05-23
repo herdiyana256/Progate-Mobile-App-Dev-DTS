@@ -1,0 +1,63 @@
+AJAX dengan JavaScript
+Pengertian AJAX
+
+AJAX (Asynchronous JavaScript and XML) merupakan teknik pemrograman web yang memungkinkan halaman web diperbarui secara dinamis tanpa perlu memuat ulang seluruh halaman. Hal ini membuat halaman web menjadi lebih interaktif dan responsif terhadap interaksi pengguna.
+
+Cara Kerja AJAX
+
+AJAX bekerja dengan cara mengirimkan permintaan asinkron ke server web menggunakan objek XMLHttpRequest di JavaScript. Permintaan ini dapat berupa permintaan untuk mengambil data baru, memperbarui data yang ada, atau mengirimkan data ke server. Respons dari server kemudian diproses oleh JavaScript dan digunakan untuk memperbarui konten halaman web tanpa memuat ulang seluruh halaman.
+
+Manfaat AJAX
+
+Berikut adalah beberapa manfaat penggunaan AJAX:
+
+Meningkatkan interaktivitas: Pengguna dapat berinteraksi dengan halaman web tanpa harus menunggu seluruh halaman dimuat ulang.
+Meningkatkan kecepatan: AJAX dapat meningkatkan kecepatan halaman web karena hanya bagian tertentu dari halaman yang diperbarui.
+Meningkatkan kegunaan: AJAX dapat membuat halaman web lebih mudah digunakan karena pengguna tidak perlu menunggu lama untuk memuat ulang halaman.
+Contoh Penggunaan AJAX
+
+Berikut adalah beberapa contoh penggunaan AJAX:
+
+Memuat data secara dinamis: AJAX dapat digunakan untuk memuat data baru ke halaman web tanpa perlu memuat ulang seluruh halaman. Hal ini dapat digunakan untuk menampilkan daftar produk baru, memperbarui status pemesanan, atau menampilkan umpan berita terbaru.
+Melakukan update secara real-time: AJAX dapat digunakan untuk melakukan update secara real-time pada halaman web. Hal ini dapat digunakan untuk menampilkan ticker saham, papan skor pertandingan olahraga, atau chat online.
+Menyimpan data tanpa memuat ulang halaman: AJAX dapat digunakan untuk menyimpan data ke server tanpa perlu memuat ulang halaman. Hal ini dapat digunakan untuk menyimpan formulir pendaftaran, menyimpan preferensi pengguna, atau mengirimkan komentar.
+Implementasi AJAX dengan JavaScript
+
+Berikut adalah contoh kode JavaScript untuk melakukan permintaan AJAX sederhana:
+
+JavaScript
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "data.json", true);
+xhr.onload = function() {
+  if (xhr.status === 200) {
+    var data = JSON.parse(xhr.responseText);
+    // Gunakan data untuk memperbarui konten halaman web
+  } else {
+    console.error("Terjadi kesalahan saat memuat data");
+  }
+};
+xhr.send();
+Gunakan kode dengan hati-hati.
+content_copy
+Kode di atas akan membuat permintaan GET ke file "data.json" dan memproses respons JSON. Data dari respons kemudian dapat digunakan untuk memperbarui konten halaman web.
+
+Pelajari Lebih Lanjut
+
+Untuk mempelajari lebih lanjut tentang AJAX, Anda dapat mengunjungi sumber daya berikut:
+
+https://www.w3schools.com/js/js_ajax_intro.asp
+https://developer.mozilla.org/en-US/docs/Glossary/AJAX
+https://www.youtube.com/watch?v=3l13qGLTgNw
+Kesimpulan
+
+AJAX adalah teknik pemrograman web yang ampuh untuk membuat halaman web yang lebih interaktif, responsif, dan mudah digunakan. Dengan mempelajari AJAX, Anda dapat membuat aplikasi web yang lebih canggih dan menarik bagi pengguna.
+
+
+
+
+tune
+
+share
+
+
+more_vert

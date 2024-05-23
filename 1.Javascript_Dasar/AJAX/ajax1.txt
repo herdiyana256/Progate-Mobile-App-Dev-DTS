@@ -1,0 +1,87 @@
+Berkenalan AJAX
+
+Mari kita mulai belajar tentang AJAX. Karena pengetahuan tentang asyncronous JavaScript digunakan di sini, harap pastikan Kamu sudah memahaminya di materi sebelumnya.
+AJAX merupakan kependekan dari Asynchronous JavaScript And XML.
+AJAX digunakan untuk mengambil data dari sebuah API dan XML adalah salah satu format data yang dikembalikan dari API.
+
+API adalah singkatan dari Application Programming Interface. Kamu akan mempelajarinya lebih lanjut di bagian selanjutnya.
+Salah satu manfaat mengakses data melalui AJAX adalah Kamu dapat membuat permintaan tertentu untuk mengakses data yang Kamu inginkan, tidak seperti meminta seluruh halaman dan seluruh data yang diperlukan untuk halaman.
+Sebagai contoh, jika kita menggunakan media sosial, kita bisa membuat status, menuliskan sebuah komentar, atau menekan tombol like. Kemudian, secara otomatis status, komentar, atau like tersebut akan muncul di halaman tersebut tanpa perlu untuk melakukan reload.
+Atau pada saat kita menggunakan Google Maps. Ketika kita menggeser tampilan Google Maps ke sebuah area baru, Google Maps secara otomatis akan mengupdate tampilan map tersebut dengan data yang sesuai.
+
+AJAX membuat situs web lebih kaya dan lebih interaktif!
+
+Betul. Dalam materi ini, kita akan menggunakan AJAX untuk mendapatkan data dari API dan menampilkan hasilnya di halaman web.
+Berikut langkah-langkahnya:
+Pahami API yang ingin Kamu akses
+Mengirim request ke sebuah API dan mendapatkan data
+Manipulasi DOM untuk menampilkan data ke halaman web tanpa harus melakukan reload
+1. Pahami API yang ingin Kamu Akses
+
+Karena ini pertama kalinya Kamu belajar mengenai API, izinkan saya menjelaskan tentang apa itu API.
+API adalah singkatan dari Application Programming Interface yang memungkinkan aplikasi untuk berkomunikasi satu sama lain.
+Salah satu jenis API yang populer disebut REST API (Representational State Transfer).
+Karena REST API mentransfer data menggunakan HTTP, Kamu dapat mengaksesnya melalui URL dengan cara yang sama seperti komunikasi client-server.
+
+Mari kita lihat contohnya!! Lebih mudah untuk memahami!
+
+Oke. Banyak organisasi di dunia menyediakan API mereka sendiri. Mari kita gunakan salah satunya.
+Kali ini, kita akan menggunakan PokeApi sebagai contoh. 
+PokeApi menyediakan banyak data Pokemon melalui API mereka dan mereka terbuka untuk siapa saja. Kamu dapat mengakses data Pokemon melalui URL yang disediakan PokeApi dan url untuk mengakses API disebut endpoint.
+Coba akses endpoint, https://pokeapi.co/api/v2/pokemon?limit=10, yang memberi Kamu 10 data Pokemon.
+
+Kamu dapat klik endpoint tersebut dan akan melihat beberapa data ditampilkan pada browser. Kamu pun akan dapat menggunakan data tersebut dalam aplikasi Kamu menggunakan AJAX.
+
+Format di browser mungkin tidak terlalu mudah dibaca, tetapi format ini sangat populer disebut JSON dan diatur seperti di bawah ini.
+{
+    "count": 1118,
+    "next": "https://pokeapi.co/api/v2/pokemon?offset=10&limit=10",
+    "previous": null,
+    "results": [
+        {
+            "name": "bulbasaur",
+            "url": "https://pokeapi.co/api/v2/pokemon/1/"
+        },
+        {
+            "name": "ivysaur",
+            "url": "https://pokeapi.co/api/v2/pokemon/2/"
+        },
+        {
+            "name": "venusaur",
+            "url": "https://pokeapi.co/api/v2/pokemon/3/"
+        },
+        {
+            "name": "charmander",
+            "url": "https://pokeapi.co/api/v2/pokemon/4/"
+        },
+        {
+            "name": "charmeleon",
+            "url": "https://pokeapi.co/api/v2/pokemon/5/"
+        },
+        {
+            "name": "charizard",
+            "url": "https://pokeapi.co/api/v2/pokemon/6/"
+        },
+        {
+            "name": "squirtle",
+            "url": "https://pokeapi.co/api/v2/pokemon/7/"
+        },
+        {
+            "name": "wartortle",
+            "url": "https://pokeapi.co/api/v2/pokemon/8/"
+        },
+        {
+            "name": "blastoise",
+            "url": "https://pokeapi.co/api/v2/pokemon/9/"
+        },
+        {
+            "name": "caterpie",
+            "url": "https://pokeapi.co/api/v2/pokemon/10/"
+        }
+    ]
+}
+
+Kamu dapat melihat setiap nama Pokemon dan titik akhir yang berbeda untuk setiap Pokemon, bukan? Sekarang kita siap untuk mengakses data menggunakan AJAX.
+
+
+

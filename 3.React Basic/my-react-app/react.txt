@@ -1,0 +1,80 @@
+node_modules/
+Folder ini berisi semua modul dan dependensi yang diunduh dari npm saat Anda menjalankan npm install. Anda tidak perlu mengedit apa pun di sini secara manual. Semua dependensi dikelola oleh npm melalui file package.json.
+
+
+public/
+Folder ini berisi file-file statis yang akan disajikan oleh server web.
+
+index.html: File HTML utama yang digunakan untuk memuat aplikasi React. Hanya ada satu file HTML ini dalam aplikasi React karena React adalah Single Page Application (SPA).
+favicon.ico: Ikon kecil yang muncul di tab browser.
+manifest.json: File konfigurasi untuk Progressive Web App (PWA).
+robots.txt: File yang memberi instruksi kepada web crawler dan bot web tentang halaman mana yang dapat atau tidak dapat mereka indeksi.
+
+
+
+3. src/
+Folder ini berisi semua file sumber kode yang digunakan dalam pengembangan aplikasi React Anda.
+
+a. components/
+Folder ini adalah tempat Anda menyimpan komponen-komponen React Anda. Komponen adalah bagian dari antarmuka pengguna yang dapat digunakan kembali.
+
+Greeting.js: File komponen yang Anda buat untuk menampilkan pesan "Hello, World!".
+b. App.css
+File ini berisi stylesheet untuk komponen App. Anda dapat menulis CSS di sini untuk mengatur tampilan dan nuansa aplikasi Anda.
+
+c. App.js
+File ini adalah komponen utama aplikasi React Anda. Di sinilah Anda mengimpor dan menggunakan komponen-komponen lain.
+
+Contoh isi App.js yang menggunakan komponen Greeting:
+
+d. App.test.js
+File ini berisi tes unit untuk komponen App. Create React App menggunakan Jest sebagai framework pengujian.
+
+e. index.css
+File ini berisi stylesheet global untuk aplikasi Anda. CSS di sini akan berlaku untuk seluruh aplikasi.
+
+f. index.js
+File ini adalah titik masuk utama untuk aplikasi React Anda. Di sini, aplikasi React di-render ke dalam DOM.
+
+g. logo.svg
+File ini adalah logo React dalam format SVG yang digunakan dalam template proyek.
+
+h. serviceWorker.js
+File ini adalah file service worker yang dapat digunakan untuk membuat aplikasi Anda bekerja offline dan memuat lebih cepat. Secara default, Create React App menonaktifkan service worker. Anda dapat mengaktifkannya dengan mengubah serviceWorker.unregister() menjadi serviceWorker.register() di index.js.
+
+
+4. .gitignore
+File ini berisi daftar file dan direktori yang harus diabaikan oleh Git. Ini mencegah file-file tertentu dari disertakan dalam repositori Git Anda.
+
+5. package.json
+File ini berisi metadata tentang proyek Anda dan daftar semua dependensi yang diperlukan untuk menjalankan aplikasi.
+
+
+6. README.md
+File ini berisi informasi tentang proyek Anda. Create React App menyertakan beberapa informasi dasar dan instruksi tentang cara menjalankan proyek. Anda dapat menambahkan lebih banyak detail di sini sesuai kebutuhan Anda.
+
+
+7. yarn.lock
+File ini digunakan oleh Yarn (alternatif npm) untuk mengunci versi dependensi. Jika Anda menggunakan Yarn untuk mengelola dependensi, file ini memastikan bahwa semua orang yang bekerja pada proyek memiliki versi yang sama dari semua paket.
+
+
+
+
+
+
+Summary :
+node_modules/: Dependensi proyek.
+public/: File-file statis dan index.html.
+src/: Sumber kode utama aplikasi React.
+components/: Tempat komponen-komponen React.
+App.css: CSS untuk komponen App.
+App.js: Komponen utama aplikasi.
+App.test.js: Tes untuk komponen App.
+index.css: CSS global.
+index.js: Titik masuk utama aplikasi.
+logo.svg: Logo React.
+serviceWorker.js: Konfigurasi service worker.
+.gitignore: File yang diabaikan oleh Git.
+package.json: Metadata proyek dan daftar dependensi.
+README.md: Informasi dan instruksi proyek.
+yarn.lock: Mengunci versi dependensi saat menggunakan Yarn.

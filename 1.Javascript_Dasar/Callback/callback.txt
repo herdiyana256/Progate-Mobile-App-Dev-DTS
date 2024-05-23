@@ -1,0 +1,65 @@
+Dalam Javascript, callback function adalah sebuah fungsi yang dipass sebagai argumen ke dalam fungsi lain. Fungsi yang dipanggil ini kemudian dieksekusi setelah fungsi utama selesai dijalankan. Callback function memungkinkan Anda untuk membuat kode yang asynchronous dan modular, sehingga meningkatkan fleksibilitas dan maintainability kode Anda.
+
+Sintaks
+
+JavaScript
+function mainFunction(callbackFunction) {
+  // Lakukan beberapa operasi
+  
+  // Panggil callback function
+  callbackFunction();
+}
+
+// Definisikan callback function
+function callbackFunction() {
+  // Lakukan operasi setelah mainFunction selesai
+}
+
+// Panggil mainFunction dengan callback function
+mainFunction(callbackFunction);
+Gunakan kode dengan hati-hati.
+content_copy
+Penjelasan
+
+Pada contoh diatas, mainFunction menerima callbackFunction sebagai argumen.
+mainFunction melakukan beberapa operasi terlebih dahulu.
+Setelah selesai, mainFunction memanggil callbackFunction.
+callbackFunction kemudian melakukan operasi setelah mainFunction selesai.
+Manfaat Callback Function
+
+Asynchronous Programming: Callback function memungkinkan Anda untuk menjalankan kode secara asynchronous, yaitu tanpa harus menunggu kode sebelumnya selesai terlebih dahulu. Hal ini sangat berguna untuk operasi yang memakan waktu lama, seperti memuat data dari server atau melakukan animasi.
+Modularitas: Callback function membantu Anda untuk memecah kode menjadi modul-modul yang lebih kecil dan terorganisir. Hal ini membuat kode Anda lebih mudah dipahami, diubah, dan digunakan kembali.
+Keterkaitan Kode: Callback function memungkinkan Anda untuk menghubungkan kode dari berbagai bagian program Anda. Hal ini memungkinkan Anda untuk membuat kode yang lebih kompleks dan terstruktur dengan baik.
+Contoh Penggunaan
+
+Misalkan Anda ingin memuat data dari server dan kemudian menampilkannya di halaman web. Anda dapat menggunakan callback function untuk melakukan hal ini:
+
+JavaScript
+function loadUserData(callback) {
+  // Lakukan permintaan HTTP untuk memuat data pengguna dari server
+  // ...
+
+  // Setelah data dimuat, panggil callback function dengan data pengguna
+  callback(userData);
+}
+
+function displayUserData(userData) {
+  // Tampilkan data pengguna di halaman web
+  // ...
+}
+
+// Panggil loadUserData dengan callback function
+loadUserData(displayUserData);
+Gunakan kode dengan hati-hati.
+content_copy
+Kesimpulan
+
+Callback function adalah alat yang sangat berguna untuk membuat kode Javascript yang asynchronous, modular, dan terhubung. Dengan memahami konsep callback function dan cara penggunaannya, Anda dapat menulis kode yang lebih efisien, mudah dipahami, dan mudah diubah.
+
+Tips tambahan:
+
+Gunakan callback function untuk operasi yang memakan waktu lama atau yang tidak perlu diblokir.
+Hindari nesting callback function yang berlebihan, karena dapat membuat kode Anda sulit dipahami.
+Gunakan nama yang jelas dan deskriptif untuk callback function untuk memudahkan pemahaman kode.
+Selalu pastikan untuk menangani error yang mungkin terjadi dalam callback function.
+Semoga materi ini bermanfaat untuk membantu Anda memahami dan menggunakan callback function dalam Javascript!

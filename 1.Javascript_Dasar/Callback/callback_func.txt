@@ -1,0 +1,99 @@
+Materi: Argument Callback Function dalam JavaScript
+Konsep Dasar:
+
+Fungsi Callback: Fungsi yang di-pass sebagai argumen ke fungsi lain. Dirancang untuk dipanggil nanti oleh fungsi yang memanggilnya.
+Fungsi Tingkat Tinggi: Fungsi yang menerima fungsi lain sebagai argumen atau mengembalikan fungsi sebagai hasilnya. Fungsi callback sering digunakan dengan fungsi tingkat tinggi.
+Pemrograman Asinkron: Melibatkan penanganan operasi yang membutuhkan waktu untuk diselesaikan tanpa memblokir utas utama. Callback adalah cara umum untuk mengelola tugas asinkron dalam JavaScript.
+Contoh: Penggunaan setTimeout dengan Callback
+
+JavaScript
+function greetAfterTwoSeconds(name, callback) {
+  setTimeout(() => {
+    console.log(`Halo, ${name}!`);
+    callback && callback(name); // Panggil callback yang disediakan jika ada
+  }, 2000); // Simulasikan penundaan 2 detik
+}
+
+function handleGreeting(name) {
+  console.log(`Senang mendengar kabar darimu, ${name}.`);
+}
+
+greetAfterTwoSeconds('Alice', handleGreeting); // Lewatkan handleGreeting sebagai callback
+Gunakan kode dengan hati-hati.
+content_copy
+Penjelasan:
+
+greetAfterTwoSeconds menerima dua argumen: name (orang yang ingin disapa) dan callback (fungsi opsional).
+Ini menggunakan setTimeout untuk mensimulasikan penundaan 2 detik sebelum menjalankan callback.
+Di dalam fungsi timeout, console.log mencetak salam dan kemudian memanggil callback jika disediakan.
+Dalam panggilan ke greetAfterTwoSeconds, handleGreeting dilewati sebagai callback.
+Ketika timeout selesai, handleGreeting dieksekusi, mencetak respons terhadap salam Alice.
+Manfaat Fungsi Callback:
+
+Meningkatkan Keterbacaan Kode: Dapat membuat kode lebih modular dan mudah dipahami dengan memisahkan masalah.
+Operasi Asinkron: Memungkinkan penanganan operasi yang memakan waktu tanpa memblokir utas utama.
+Pemrograman Berbasis Peristiwa: Menanggapi peristiwa (misalnya, interaksi pengguna, permintaan jaringan) dengan melewati fungsi callback ke pendengar peristiwa.
+Pertimbangan Tambahan:
+
+Penanganan Kesalahan: Pertimbangkan untuk memasukkan penanganan kesalahan dalam fungsi callback untuk mengelola potensi masalah dengan anggun selama operasi asinkron.
+Callback Hell: Meskipun fungsi callback kuat, berhati-hatilah untuk tidak menumpuknya terlalu dalam, karena dapat menyebabkan "callback hell" (kode yang sulit dibaca). Alternatif seperti janji dan async/await dapat lebih mudah dikelola untuk alur kerja asinkron yang kompleks.
+Kesimpulan:
+
+Fungsi callback argumen adalah alat penting dalam kotak alat pemrograman asinkron JavaScript. Dengan melewati fungsi sebagai argumen, Anda dapat membuat kode yang fleksibel dan efisien untuk menangani peristiwa dan operasi asinkron. Memahami callback sangat penting untuk menguasai pemrograman asinkron dalam JavaScript.
+
+Contoh Kode:
+
+1. Menghitung jumlah elemen dalam array:
+
+JavaScript
+function countElements(array, callback) {
+  const count = array.length;
+  setTimeout(() => callback(count), 2000);
+}
+
+const numbers = [1, 2, 3, 4, 5];
+
+countElements(numbers, (count) => {
+  console.log(`Jumlah elemen dalam array adalah: ${count}`);
+});
+Gunakan kode dengan hati-hati.
+content_copy
+2. Memuat data dari API:
+
+JavaScript
+function loadUserData(userId, callback) {
+  setTimeout(() => {
+    const userData = {
+      name: "John Doe",
+      age: 30,
+      email: "johndoe@example.com",
+    };
+    callback(userData);
+  }, 2000);
+}
+
+loadUserData(1, (userData) => {
+  console.log(`Data pengguna: ${JSON.stringify(userData)}`);
+});
+Gunakan kode dengan hati-hati.
+content_copy
+3. Menangani klik tombol:
+
+JavaScript
+const button = document.getElementById('myButton');
+
+button.addEventListener('click', () => {
+  console.log('Tombol diklik!');
+});
+Gunakan kode dengan hati-hati.
+content_copy
+Penjelasan:
+
+Contoh 1:
+countElements menerima array dan fungsi callback sebagai argumen.
+Menghitung jumlah elemen dalam array dan memanggil callback setelah penundaan 2 detik.
+Callback menerima jumlah elemen dan mencetaknya ke konsol.
+Contoh 2:
+loadUserData menerima ID pengguna dan fungsi callback sebagai argumen.
+Memuat data pengguna dari API simulasi dan memanggil callback setelah penundaan 2 detik.
+Callback menerima data pengguna dan mencetaknya

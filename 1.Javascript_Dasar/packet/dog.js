@@ -29,3 +29,4 @@ class Dog extends Animal {
 }
 
 export default Dog;
+

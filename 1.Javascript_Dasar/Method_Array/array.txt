@@ -1,0 +1,116 @@
+Materi dan Code untuk Method Array pada JavaScript
+Array merupakan struktur data fundamental dalam JavaScript yang digunakan untuk menyimpan koleksi nilai. JavaScript menyediakan berbagai method array untuk memanipulasi dan mengelola data dalam array. Berikut beberapa method array yang umum digunakan beserta contoh kodenya:
+
+1. Push()
+
+Digunakan untuk menambahkan elemen baru ke akhir array.
+
+JavaScript
+const angka = [1, 2, 3];
+angka.push(4); // Menambahkan elemen 4 ke akhir array
+console.log(angka); // Output: [1, 2, 3, 4]
+Gunakan kode dengan hati-hati.
+content_copy
+2. Pop()
+
+Menghapus dan mengembalikan elemen terakhir dari array.
+
+JavaScript
+const angka = [1, 2, 3];
+const terakhir = angka.pop(); // Menghapus dan mengembalikan elemen 3
+console.log(angka); // Output: [1, 2]
+console.log(terakhir); // Output: 3
+Gunakan kode dengan hati-hati.
+content_copy
+3. Shift()
+
+Menghapus dan mengembalikan elemen pertama dari array.
+
+JavaScript
+const angka = [1, 2, 3];
+const pertama = angka.shift(); // Menghapus dan mengembalikan elemen 1
+console.log(angka); // Output: [2, 3]
+console.log(pertama); // Output: 1
+Gunakan kode dengan hati-hati.
+content_copy
+4. Unshift()
+
+Menambahkan elemen baru ke awal array.
+
+JavaScript
+const angka = [1, 2, 3];
+angka.unshift(0); // Menambahkan elemen 0 ke awal array
+console.log(angka); // Output: [0, 1, 2, 3]
+Gunakan kode dengan hati-hati.
+content_copy
+5. Slice()
+
+Membuat array baru dengan elemen yang diekstrak dari array yang sudah ada.
+
+JavaScript
+const angka = [1, 2, 3, 4, 5];
+const irisan = angka.slice(2, 4); // Mengekstrak elemen dari indeks 2 hingga 3 (tidak termasuk elemen ke-4)
+console.log(irisan); // Output: [3, 4]
+Gunakan kode dengan hati-hati.
+content_copy
+6. Splice()
+
+Memotong, menambahkan, atau menghapus elemen dari array.
+
+JavaScript
+const angka = [1, 2, 3, 4, 5];
+angka.splice(2, 2, 6, 7); // Menghapus 2 elemen dari indeks 2, dan menambahkan elemen 6 dan 7
+console.log(angka); // Output: [1, 2, 6, 7, 5]
+Gunakan kode dengan hati-hati.
+content_copy
+7. Join()
+
+Menggabungkan elemen array menjadi string dengan pemisah yang ditentukan.
+
+JavaScript
+const nama = ["Budi", "Ani", "Caca"];
+const gabungan = nama.join(", "); // Menggabungkan dengan pemisah koma dan spasi
+console.log(gabungan); // Output: Budi, Ani, Caca
+Gunakan kode dengan hati-hati.
+content_copy
+8. Reverse()
+
+Membalikkan urutan elemen dalam array.
+
+JavaScript
+const angka = [1, 2, 3, 4, 5];
+angka.reverse(); // Membalikkan urutan elemen
+console.log(angka); // Output: [5, 4, 3, 2, 1]
+Gunakan kode dengan hati-hati.
+content_copy
+9. Sort()
+
+Mengurutkan elemen array secara ascending (naik) atau descending (turun).
+
+JavaScript
+const angka = [5, 1, 3, 4, 2];
+angka.sort(); // Mengurutkan secara ascending
+console.log(angka); // Output: [1, 2, 3, 4, 5]
+
+angka.sort((a, b) => b - a); // Mengurutkan secara descending
+console.log(angka); // Output: [5, 4, 3, 2, 1]
+Gunakan kode dengan hati-hati.
+content_copy
+10. Filter()
+
+Membuat array baru yang berisi elemen yang memenuhi kondisi tertentu.
+
+JavaScript
+const angka = [1, 2, 3, 4, 5];
+const genap = angka.filter(x => x % 2 === 0); // Memilih elemen genap
+console.log(genap); // Output: [2, 4]
+Gunakan kode dengan hati-hati.
+content_copy
+11. Map()
+
+Membuat array baru dengan hasil transformasi dari setiap elemen array.
+
+JavaScript
+const angka = [1, 2, 3, 4, 5];
+const kuadrat = angka.map(x => x * x); // Menghitung kuadrat setiap elemen
+console.log(

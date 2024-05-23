@@ -1,0 +1,76 @@
+Materi: Fetch API pada JavaScript
+Fetch API adalah sebuah antarmuka JavaScript modern untuk melakukan permintaan HTTP dan mengambil data dari server. Fetch API menggantikan metode XMLHttpRequest yang lebih lama dan menawarkan beberapa keuntungan, seperti:
+
+Lebih mudah digunakan: Fetch API memiliki sintaks yang lebih sederhana dan mudah dipahami.
+Lebih fleksibel: Fetch API memungkinkan Anda untuk melakukan berbagai jenis permintaan HTTP, seperti GET, POST, PUT, dan DELETE.
+Lebih kuat: Fetch API memungkinkan Anda untuk melakukan kontrol yang lebih besar atas permintaan dan respons HTTP.
+Berikut adalah contoh cara menggunakan Fetch API untuk mengambil data dari server:
+
+JavaScript
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+Gunakan kode dengan hati-hati.
+content_copy
+Penjelasan kode:
+
+fetch('https://jsonplaceholder.typicode.com/todos/1'): Ini memulai permintaan HTTP ke URL yang ditentukan.
+.then(response => response.json()): Ini menangani respons dari server. Fungsi response.json() mengonversi respons menjadi objek JavaScript.
+.then(data => console.log(data)): Ini mencetak data JSON ke konsol.
+.catch(error => console.error(error)): Ini menangani kesalahan apa pun yang terjadi.
+Berikut adalah beberapa contoh lain cara menggunakan Fetch API:
+
+Melakukan permintaan POST:
+JavaScript
+fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    title: 'My new post',
+    body: 'This is the content of my new post.'
+  })
+})
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+Gunakan kode dengan hati-hati.
+content_copy
+Menggunakan header permintaan:
+JavaScript
+fetch('https://jsonplaceholder.typicode.com/todos/1', {
+  headers: {
+    'Authorization': 'Bearer my-token'
+  }
+})
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+Gunakan kode dengan hati-hati.
+content_copy
+Memeriksa status respons:
+JavaScript
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+  .then(response => {
+    if (response.status === 200) {
+      return response.json();
+    } else {
+      throw new Error('Request failed with status ' + response.status);
+    }
+  })
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+Gunakan kode dengan hati-hati.
+content_copy
+Sumber daya:
+
+https://www.geeksforgeeks.org/what-is-the-use-of-the-fetch-api-in-javascript/
+https://www.w3schools.com/jsref/api_fetch.asp
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+Sumber
+info
+tech-webdevelopment.news-6.com/async-js-an-in-depth-guide-to-understanding-asynchronous-javascript/
+stackoverflow.com/questions/65622053/how-to-send-a-post-request-to-flask-api-using-fetch-in-a-react-app
+github.com/java-3-haifa/-92_07_10_19_JavaScript_ES6_Plus

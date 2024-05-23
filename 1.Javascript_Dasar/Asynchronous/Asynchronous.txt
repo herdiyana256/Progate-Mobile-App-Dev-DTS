@@ -1,0 +1,63 @@
+Materi: Proses Asynchronous JavaScript
+Konsep Dasar:
+
+Operasi Asynchronous: Operasi yang membutuhkan waktu untuk diselesaikan tanpa memblokir utas utama. Contohnya termasuk:
+Memuat data dari API
+Membaca file dari disk
+Menangani event pengguna
+Pemrograman Asynchronous: Teknik untuk menangani operasi asynchronous dalam JavaScript. Hal ini memungkinkan aplikasi untuk tetap responsif dan tidak terhenti saat menunggu operasi asynchronous selesai.
+Callback Function: Fungsi yang di-pass sebagai argumen ke fungsi lain. Digunakan untuk memberitahukan fungsi pemanggil ketika operasi asynchronous selesai.
+Promise: Objek yang mewakili hasil operasi asynchronous. Digunakan untuk mengelola operasi asynchronous dengan lebih mudah dan terstruktur.
+Async/Await: Kata kunci yang memungkinkan penulisan kode asynchronous yang lebih ringkas dan mudah dipahami.
+Contoh Proses Asynchronous:
+
+1. Memuat Data dari API:
+
+Bayangkan Anda sedang membangun aplikasi web yang menampilkan data pengguna dari API. Proses pengambilan data dari API merupakan operasi asynchronous karena membutuhkan waktu untuk menyelesaikan permintaan dan menerima respons dari server.
+
+JavaScript
+function loadUserData(userId) {
+  fetch(`https://api.example.com/users/${userId}`)
+    .then((response) => response.json())
+    .then((userData) => {
+      console.log(`Data pengguna: ${JSON.stringify(userData)}`);
+    })
+    .catch((error) => {
+      console.error('Terjadi kesalahan saat memuat data pengguna:', error);
+    });
+}
+
+loadUserData(123);
+Gunakan kode dengan hati-hati.
+content_copy
+Penjelasan:
+
+Fungsi loadUserData menerima ID pengguna sebagai argumen.
+Fungsi ini menggunakan fetch untuk membuat permintaan ke API pengguna.
+Metode then digunakan untuk menangani respons yang berhasil. Di dalam callback then, data pengguna di-parse dan dicetak ke konsol.
+Metode catch digunakan untuk menangani kesalahan yang mungkin terjadi selama permintaan.
+2. Menangani Event Pengguna:
+
+Ketika pengguna berinteraksi dengan elemen HTML, seperti mengklik tombol atau memasukkan teks, JavaScript dapat memicu event. Event ini dapat digunakan untuk membuat aplikasi web yang interaktif.
+
+JavaScript
+const button = document.getElementById('myButton');
+
+button.addEventListener('click', () => {
+  console.log('Tombol diklik!');
+});
+Gunakan kode dengan hati-hati.
+content_copy
+Penjelasan:
+
+Kode ini menargetkan elemen HTML dengan ID myButton.
+Metode addEventListener digunakan untuk menambahkan event listener ke elemen.
+Ketika tombol diklik, fungsi callback dieksekusi, mencetak pesan "Tombol diklik!" ke konsol.
+Manfaat Proses Asynchronous:
+
+Meningkatkan Responsivitas: Aplikasi tetap responsif dan tidak terhenti saat menunggu operasi asynchronous selesai.
+Peningkatan Performa: Memungkinkan eksekusi kode lain secara paralel dengan operasi asynchronous.
+Kode yang Lebih Terstruktur: Promise dan async/await memungkinkan penulisan kode asynchronous yang lebih mudah dipahami dan dikelola.
+Kesimpulan:
+
+Proses asynchronous merupakan elemen penting dalam JavaScript. Dengan memahami konsep dan teknik asynchronous, Anda dapat membangun aplikasi web yang responsif, performant, dan interaktif.

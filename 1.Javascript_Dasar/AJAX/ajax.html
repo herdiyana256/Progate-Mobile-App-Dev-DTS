@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Progate</title>
+</head>
+<body>
+  <h1>Mulai menggunakan AJAX</h1>
+
+  <button type="button" onclick="fetchData()">Fetch data</button>
+
+  <script>
+    function fetchData() {
+      const xhttp = new XMLHttpRequest();
+      const url = "https://pokeapi.co/api/v2/pokemon?limit=10";
+      const httpMethod = "GET";
+      xhttp.onload = function() {
+        console.log(this.responseText);
+      }
+      xhttp.open(httpMethod, url);
+      xhttp.send();
+    }
+  </script>
+</body>
+</html>
+
+
+/*
+
+ekarang Kamu berhasil menampilkan data dari API di browser Kamu! Tapi AJAX bisa menangani format data lain selain XML ya?
+
+Tangkapan yang bagus, Ken. Walaupun AJAX adalah Asynchronous JavaScript Dan "XML" dan XMLHttpRequest() berisi "XML" dalam namanya, AJAX dapat memproses beberapa format data berikut.
+XML (Extensible Markup Language)
+JSON (JavaScript Object Notation)
+Plain text
+HTML
+*/

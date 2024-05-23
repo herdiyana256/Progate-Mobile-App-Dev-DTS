@@ -11,3 +11,6 @@ for(let i = 1; i++ <= 100; i++) {
 }
 //asalah terjadi karena Anda menggunakan operator peningkatan (++) dalam kondisi loop for. Pada setiap iterasi, nilai i ditingkatkan sebelum kondisi dievaluasi. Ini mengakibatkan nilai yang dievaluasi oleh kondisi loop bukan nilai asli i, tetapi nilai i setelah peningkatan.
 
+
+
+

@@ -1,0 +1,12 @@
+5. Saat Kamu Menggunakan API Gratis
+
+PokeApi itu menyenangkan! Ada banyak hal yang bisa saya lakukan dengan data yang disediakan oleh API!!
+
+Itu benar. Tapi, saya akan membagikan apa yang harus Kamu ingat saat menggunakan API gratis.
+Di dunia perangkat lunak, ada banyak source code yang open source dan gratis berkat kontribusi banyak orang dan organisasi.
+Namun tentunya membutuhkan biaya untuk menyediakannya di Internet seperti biaya server hosting.
+
+Untuk Ninja kami, saya ingin meminta untuk tidak hanya menjadi pengguna gratis dan menggunakan open source dengan cara yang egois. Di masa depan, ketika Kamu mendapatkan keterampilan, silakan berkontribusi kembali ke dunia perangkat lunak.
+Dalam dokumentasi PokeApi, mereka memiliki Kebijakan Penggunaan Adil, dengan mengatakan "PokéAPI pada dasarnya adalah alat pendidikan, dan kami tidak akan mentolerir penolakan layanan serangan yang mencegah orang belajar." 
+
+Harap menghargai pengembang PokeApi dan memiliki etika ketika Kamu menggunakannya untuk pembelajaran Kamu!

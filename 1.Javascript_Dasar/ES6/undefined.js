@@ -100,3 +100,45 @@ for(let i = 0; i < characters.length; i++) {
 perkenalkan saya adalah herdiyan saya berusia undefined
 perkenalkan saya adalah andi saya berusia undefined
 */
+
+
+
+
+// tugas
+const characters = [
+    {name: "Ninja Ken", age: 14},
+    {name: "Guru Domba", age: 100},
+    {name: "Baby Ninja Ben", age: 5},
+    {name: "Birdie"}
+  ];
+  
+  for (let i = 0; i < characters.length; i++) {
+    console.log("--------------------");
+    
+    const character = characters[i];
+    
+    console.log(`Nama saya adalah ${character.name}`);
+    
+    // Tambahkan statement if di bawah
+    if(character.age === undefined) {
+      console.log("Umur saya rahasia!");
+    } else {
+        console.log(`Saya berumur ${character.age} tahun`);
+    }
+    
+    
+  }
+
+  /*
+Nama saya adalah Ninja Ken
+Saya berumur 14 tahun
+--------------------
+Nama saya adalah Guru Domba
+Saya berumur 100 tahun
+--------------------
+Nama saya adalah Baby Ninja Ben
+Saya berumur 5 tahun
+--------------------
+Nama saya adalah Birdie
+Umur saya rahasia!
+  */

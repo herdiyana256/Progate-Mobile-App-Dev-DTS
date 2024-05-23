@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contoh Penggunaan JSON</title>
+</head>
+<body>
+  <div id="data-pengguna"></div>
+
+  <script>
+    fetch('https://example.com/data.json')
+      .then(response => response.json())
+      .then(data => {
+        const pengguna = data[0];
+        const divPengguna = document.getElementById('data-pengguna');
+
+        divPengguna.innerHTML = `
+          <h2>Nama: ${pengguna.nama}</h2>
+          <p>Umur: ${pengguna.umur}</p>
+          <p>Pekerjaan: ${pengguna.pekerjaan}</p>
+          <p>Hobi: ${pengguna.hobi.join(', ')}</p>
+        `;
+      });
+  </script>
+</body>
+</html>
+
+<!-- //Contoh ini menunjukkan cara memuat data JSON dari URL https://example.com/data.json. Data JSON kemudian diurai dan digunakan untuk membuat elemen HTML yang menampilkan informasi pengguna. -->
+
+
+
+
+<!-- Contoh Penggunaan JSON dalam Aplikasi Web
+
+Berikut adalah contoh sederhana bagaimana JSON dapat digunakan untuk memuat data dari server web dan menampilkannya di halaman web: -->

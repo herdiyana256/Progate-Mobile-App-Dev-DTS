@@ -1,0 +1,82 @@
+ethod Filter pada Javascript
+Pengantar
+
+Dalam Javascript, method filter() merupakan fungsi bawaan yang sangat berguna untuk menyaring elemen-elemen dari sebuah array. Fungsi ini memungkinkan Anda untuk membuat array baru yang hanya berisi elemen-elemen yang memenuhi kriteria tertentu. Kelebihan method ini adalah tidak mengubah array asli, melainkan menghasilkan array baru yang difilter.
+
+Sintaks
+
+JavaScript
+const newArray = originalArray.filter(callbackFn);
+Gunakan kode dengan hati-hati.
+content_copy
+originalArray: Array yang ingin Anda filter.
+callbackFn: Fungsi yang dipanggil untuk setiap elemen dalam originalArray. Fungsi ini mengembalikan true jika elemen tersebut harus disertakan dalam array baru, dan false jika tidak.
+Parameter callbackFn
+
+Fungsi callbackFn menerima tiga parameter:
+
+element: Elemen saat ini dari originalArray yang sedang diproses.
+index (opsional): Indeks elemen saat ini dalam originalArray.
+array (opsional): Array asli tempat elemen tersebut berada.
+Anda biasanya hanya perlu menggunakan parameter element untuk menentukan apakah elemen tersebut harus disertakan dalam array baru.
+
+Contoh Penggunaan
+
+Misalkan Anda memiliki array angka berikut:
+
+JavaScript
+const angka = [1, 2, 3, 4, 5, 6];
+Gunakan kode dengan hati-hati.
+content_copy
+1. Menyaring Angka Genap
+
+Anda dapat menggunakan filter() untuk membuat array baru yang hanya berisi angka genap:
+
+JavaScript
+const angkaGenap = angka.filter(function(element) {
+  return element % 2 === 0;
+});
+
+console.log(angkaGenap); // Output: [2, 4, 6]
+Gunakan kode dengan hati-hati.
+content_copy
+Penjelasan:
+
+Fungsi callbackFn memeriksa apakah element (angka saat ini) habis dibagi 2 (genap).
+Jika habis dibagi 2 (element % 2 === 0), fungsi mengembalikan true, dan elemen tersebut ditambahkan ke angkaGenap.
+Jika tidak habis dibagi 2, fungsi mengembalikan false, dan elemen tersebut diabaikan.
+2. Menyaring Nama dengan Panjang Lebih dari 5 Karakter
+
+JavaScript
+const nama = ["Ali", "Budi", "Chandra", "David", "Edi"];
+
+const namaPanjang = nama.filter(function(element) {
+  return element.length > 5;
+});
+
+console.log(namaPanjang); // Output: ["Chandra", "David"]
+Gunakan kode dengan hati-hati.
+content_copy
+Penjelasan:
+
+Fungsi callbackFn memeriksa apakah panjang (element.length) dari nama saat ini lebih dari 5 karakter.
+Jika lebih dari 5 karakter, fungsi mengembalikan true, dan nama tersebut ditambahkan ke namaPanjang.
+3. Menggunakan Arrow Function
+
+Anda dapat menggunakan arrow function untuk menulis callbackFn secara lebih ringkas:
+
+JavaScript
+const angkaGanjil = angka.filter(element => element % 2 !== 0);
+console.log(angkaGanjil); // Output: [1, 3, 5]
+Gunakan kode dengan hati-hati.
+content_copy
+Kesimpulan
+
+Method filter() adalah alat yang ampuh untuk membuat array baru yang berisi elemen-elemen yang memenuhi kriteria tertentu. Dengan pemahaman yang baik tentang sintaks dan penggunaannya, Anda dapat secara efisien menyaring data dalam array Javascript Anda.
+
+Tips tambahan:
+
+Anda dapat menggunakan berbagai operator logika dan perbandingan dalam fungsi callbackFn untuk menentukan kriteria yang lebih kompleks.
+Anda dapat menggabungkan method filter() dengan method lain seperti map() dan reduce() untuk melakukan manipulasi data yang lebih kompleks pada array.
+Selalu pastikan untuk menggunakan fungsi callbackFn yang efisien dan mudah dibaca untuk menjaga kode Anda tetap rapi dan mudah dipahami.
+Semoga materi ini bermanfaat untuk membantu Anda memahami dan menggunakan method filter() dalam Javascript!

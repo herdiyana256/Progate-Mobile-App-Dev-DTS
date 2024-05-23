@@ -1,0 +1,45 @@
+Materi: Proses Synchronous JavaScript
+Konsep Dasar:
+
+Proses Synchronous dalam JavaScript berarti eksekusi kode dilakukan secara berurutan, baris demi baris. Baris kode berikutnya tidak akan dijalankan sampai baris kode sebelumnya selesai dieksekusi. Hal ini mirip dengan antrian, di mana setiap item harus diproses sebelum item berikutnya.
+
+Karakteristik:
+
+Urutan Eksekusi: Kode dijalankan dari atas ke bawah, baris demi baris.
+Memblokir Operasi: Operasi yang berjalan akan memblokir eksekusi baris kode berikutnya sampai selesai.
+Kesederhanaan: Lebih mudah dipahami dan di-debug karena aliran kode yang jelas.
+Keterbatasan: Kurang efisien untuk tugas asinkron atau operasi yang memakan waktu lama.
+Contoh Proses Synchronous:
+
+JavaScript
+console.log('Halo, Dunia!'); // Menampilkan pesan ke konsol
+
+const message = 'Selamat datang di JavaScript!';
+console.log(message); // Menampilkan variabel message ke konsol
+
+const sum = 10 + 20;
+console.log(sum); // Menampilkan hasil penjumlahan
+
+// Setiap baris kode dijalankan secara berurutan
+Gunakan kode dengan hati-hati.
+content_copy
+Penjelasan:
+
+Baris pertama (console.log('Halo, Dunia!')) mencetak pesan "Halo, Dunia!" ke konsol.
+Baris kedua mendeklarasikan variabel message dan menyimpan nilai "Selamat datang di JavaScript!".
+Baris ketiga (console.log(message)) mencetak nilai variabel message ke konsol.
+Baris keempat mendeklarasikan variabel sum dan menyimpan hasil penjumlahan 10 dan 20.
+Baris kelima (console.log(sum)) mencetak nilai variabel sum ke konsol.
+Manfaat Proses Synchronous:
+
+Mudah Dipelajari: Cocok untuk pemula karena mudah dipahami dan diprediksi.
+Debugging Lebih Mudah: Alur kode yang jelas memudahkan identifikasi dan koreksi kesalahan.
+Operasi Sederhana: Cocok untuk tugas-tugas sederhana yang tidak memerlukan pemrosesan paralel.
+Keterbatasan Proses Synchronous:
+
+Memblokir Operasi: Operasi yang memakan waktu lama dapat memblokir eksekusi kode lainnya, membuat aplikasi tampak tidak responsif.
+Kurang Efisien: Tidak optimal untuk aplikasi yang membutuhkan pemrosesan simultan atau respons cepat.
+Skalabilitas Terbatas: Sulit untuk menangani banyak tugas asinkron secara efisien.
+Kesimpulan:
+
+Proses synchronous adalah dasar dari pemrograman JavaScript dan penting untuk dipahami oleh pemula. Namun, untuk aplikasi yang kompleks dengan tugas asinkron atau operasi yang memakan waktu lama, proses asynchronous dengan callback, promise, atau async/await lebih direkomendasikan untuk meningkatkan performa dan efisiensi.

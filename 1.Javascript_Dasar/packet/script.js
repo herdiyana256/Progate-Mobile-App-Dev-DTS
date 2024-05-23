@@ -28,8 +28,20 @@ script.js    dog.js      animal.js
 
 // export 
 //Pertama, mari kita buat agar class Animal dalam animal.js dapat digunakan dalam file lain. Setelah mendefinisikan class, tulis export default ClassName untuk meng-export class dan memungkinkannya untuk diteruskan ke file yang berbeda
+
+//animal.js 
 class Animal {
     // 
 }
 
 export default Animal; // Memperbolehkan class Animal digunakan di file lain
+
+
+
+
+
+//Import
+// dog.js 
+
+//Selanjutnya, mari kita buat agar class Animal dapat digunakan di dalam dog.js. Untuk menggunakan class yang didefinisikan dalam file lain, Anda harus meng-importnya. Anda dapat meng-import class dengan menulis import ClassName from "./fileName" di baris atas file. Anda dapat mengecualikan ekstensi file .js.
+import Animal from "./animal"
